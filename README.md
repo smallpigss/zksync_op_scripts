@@ -66,3 +66,16 @@ $ npm run update-wallet-state
 ![notion数据表格](./docs/imgs/notion.png)
 
 如果想要使用notion记录数据，上面的property要一致，并且lite,era的交互次数和余额都是number类型。同时，必须要配置config.yml中的notion的相关配置。
+
+### 3. 运行钱包交互操作
+
+```shell
+$ npm run interaction
+```
+
+这里可以指定要交互的网络是所有的，还是只有其中一个网络，通过--zkNet指定，类型包括(all, lite, era), 默认是all，如下
+
+```shell
+$ npm run interaction -- --zkNet=lite # 指定lite网络进行交互
+```
+
