@@ -3,6 +3,7 @@ import * as ethers from 'ethers';
 import web3Utils from "web3-utils";
 import config from "./libs/config.js";
 import cids from "./cids.js";
+import { sleep } from "./libs/utils.js";
 
 const zkSyncProvider = await zksync.getDefaultProvider('mainnet');
 const ethProvider = ethers.getDefaultProvider('mainnet');
@@ -93,9 +94,15 @@ export const interaction = async ({ privateKey }) => {
         return
     }
 
-    // await transfer({
-    //     wallet,
-    //     amount: transferNumber,
-    // })
+    await transfer({
+        wallet,
+        amount: transferNumber,
+    });
+
+    // 随机sleep (5-15)秒
+    const sleepMillionSeconds = (Math.floor(Math.random() * 15) + 5) * 1000;
+    console.log(`休眠 ${sleepMillionSeconds}毫秒`);
+    await sleep(sleepMillionSeconds);
+
     await mintNft({ wallet });
 }
