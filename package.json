@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "create-wallet": "node ./src/createWallet.js",
-    "lite-transfer": "node ./src/lite/transfer.js"
+    "lite-transfer": "node ./src/lite/transfer.js",
+    "update-wallet-state": "node ./src/updateWalletState.js"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.5",
@@ -21,6 +22,7 @@
     "web3": "^1.9.0",
     "web3-utils": "^1.9.0",
     "zksync": "^0.13.1",
+    "zksync-web3": "^0.14.3",
     "yaml": "^2.2.2",
     "write-yaml-file": "^5.0.0"
   },
