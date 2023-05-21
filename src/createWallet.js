@@ -4,7 +4,6 @@ import writeYamlFile from 'write-yaml-file';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import config from "./libs/config.js";
-import { createDirIfNotExists } from "./libs/utils.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -13,7 +12,6 @@ export function createWallet() {
     const wallets = []
     for (let i = 0; i < walletCount; i++) {
         const { privateKey, address, mnemonic: { phrase } } = ethers.Wallet.createRandom();
-        // console.log(privateKey, address, phrase);
         wallets.push({
             address,
             privateKey,
@@ -21,7 +19,7 @@ export function createWallet() {
         })
     }
     const date = dayjs().format('YYYY-MM-DD');
-    const accountFolder = join(__dirname, '../accounts');
+    // const accountFolder = join(__dirname, '../accounts');
     const walletFile = join(__dirname, '../accounts', `${date}_${Date.now()}.yml`);
     writeYamlFile(walletFile, {wallets: wallets}).then(() => {
         console.log('done')
