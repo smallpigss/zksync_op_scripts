@@ -133,3 +133,5 @@ dist
 .idea
 
 accounts
+
+.DS_Store

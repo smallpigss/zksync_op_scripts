@@ -7,7 +7,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "create-wallet": "node ./src/createWallet.js",
-    "lite-transfer": "node ./src/lite/transfer.js",
     "update-wallet-state": "node ./src/updateWalletState.js",
     "interaction": "node ./src/interaction.js"
   },
