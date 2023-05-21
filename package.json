@@ -1,0 +1,29 @@
+{
+  "name": "my_zksync_script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-wallet": "node ./src/createWallet.js",
+    "lite-transfer": "node ./src/lite/transfer.js"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.5",
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.14.0",
+    "node-console-colors": "^1.1.5",
+    "web3": "^1.9.0",
+    "web3-utils": "^1.9.0",
+    "zksync": "^0.13.1",
+    "yaml": "^2.2.2",
+    "write-yaml-file": "^5.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

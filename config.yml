@@ -1,0 +1,16 @@
+walletCount: 100
+
+okx:
+  api:
+    key: 'xxx'
+    secretKey: 'xxx'
+    passPhrase: 'xxx'
+
+lite:
+  transferNumber:
+    - 1
+    - 0.001
+
+notion:
+  token: 'xxx'
+  dbId: 'xxx'
