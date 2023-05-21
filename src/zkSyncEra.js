@@ -31,7 +31,7 @@ export const interaction = async ({ privateKey }) => {
     const balanceNum = await wallet.getBalance();
     const balance = Number(ethers.utils.formatEther(balanceNum));
     if (balance === 0) {
-        console.log(`${wallet.address} 余额不足，跳过交互`);
+        console.log(`zkSync era ${wallet.address} 余额不足，跳过交互`);
         return
     }
 
